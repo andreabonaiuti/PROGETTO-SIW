@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<base href="/">
+<link href="./assets/css/main.css" rel="stylesheet" type="text/css"/>
+<title>Index</title>
+</head>
+<body>
+	<header id="header">
+		<a class="logo" href="index.html">Acme Training Center</a>
+		<nav>
+			<a th:href="@{/home}">HOME</a>
+		</nav>
+	</header>
+	<section id="banner">
+		<div class="inner">
+
+			<p align="center">
+				<strong><font size="50">Benvenuto in ACMETC</font></strong>
+			</p>
+			<p align="center">
+				<font size="6">Un sistema informativo che gestisce un insieme
+					di centri di formazione</font>
+			</p>
+		</div>
+		<video autoplay="" loop="" muted="" playsinline=""
+			src="images/banner.mp4"></video>
+	</section>
+	<div class="highlights">
+		<section>
+			<div class="content">
+				<header>
+					<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+					<h3>
+						<a th:href="@{/login}">Login</a>
+					</h3>
+				</header>
+				<p>Per poter accedere alla Home effettua il login</p>
+			</div>
+		</section>
+		<section>
+			<div class="content">
+				<header>
+					<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+					<h3>
+						<a th:href="@{/registra}">Registrati</a>
+					</h3>
+				</header>
+				<p>Se non hai ancora un account allora registrati</p>
+			</div>
+		</section>
+		<section>
+			<div class="content">
+				<header>
+					<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+					<h3>Chi siamo?</h3>
+				</header>
+				<ul>
+					<li>Andrea Bonaiuti: Studente di ingegneria informatica</li>
+					<li>Lorenzo Pannucci: Studente di ingegneria informatica</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<footer id="footer">
+		<div class="inner">
+			<div class="content">
+				<section>
+					<h3>INFO</h3>
+					<p>Questo sito è stato creato ai fini di un progetto del corso
+						di Sistemi Informativi su Web. Anno accademico 2017/2018.</p>
+				</section>
+				<section>
+					<h4>SOCIAL</h4>
+					<ul class="plain">
+						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+						<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="copyright">©BonaiutiPannucciCopyright.</div>
+		</div>
+	</footer>
+</body>
+</html>

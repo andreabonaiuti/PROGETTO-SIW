@@ -1,0 +1,61 @@
+analisi e requisiti:
+ENTITA':
+-responsabileCentro
+-centro(nome, indirizzo, email, telefono, capienza)
+-attività giornaliera(nome, data, orario)
+-allievo(nome, cognome, email, telefono, data, luogoDiNascita)
+
+CASI D'USO:
+-inserimento nuova attività UC2
+-registrazione allievo UC3
+-iscrizione ad attività UC4
+-visualizzazione dati UC5
+-login UC1
+-(creazione centro)
+-(monitoraggio attività)
+
+UC1(login):
+Attore primario: Responsabile del Centro.
+-Il responsabile apre il sistema di gestione del centro.
+-Il responsabile inserisce le credenziali di accesso al software.
+-Se username e password sono corretti il responsabile ha effettuato l'accesso con successo
+	ed ora può usare il sistema entro i suoi limiti di responsabile di un centro.
+
+UC2(inserimento nuova attività):
+Attore primario: Responsabile del Centro.
+-Il responsabile apre il sistema.
+-Il responsabile seleziona l'opzione di inserimento di una nuova attività ed il sistema mostra
+l'elenco di tutte le attività registrate fino ad ora.
+-Il responsabile o sceglie un'attività dall'elenco ed il sistema gli mostra la descrizione,
+altrimenti sceglie di crearne una nuova e deve inserire tutte le informazioni necessarie.
+-Il responsabile inserisce la data e l'ora previste per tale attività.
+-Il sistema mostra un riepilogo dell'attività per richiederne la conferma.
+-Il responsabile conferma ed il sistema registra tale attività.
+
+UC3(registrazione allievo):
+Attore primario: Responsabile del Centro.
+-Il responsabile apre il sistema.
+-Il responsabile inserisce informazioni anagrafiche del nuovo allievo.
+-Il sistema mostra un riepilogo dei dati per conferma.
+-Il responsabile conferma ed il sistema registra lo studente passando poi 
+all'iscrizione ad attività(UC4).
+
+UC4(iscrizione ad attività):
+Attore primario: Responsabile del Centro.
+-Un allievo si presenta in un centro per iscriversi ad un'attività.
+-Il responsabile del centro inserisce nome e cognome dello studente.
+-Se l'allievo non è registrato il sistema lo avvisa e si passa alla registrazione allievo(UC3),
+altrimenti il sistema mostra un riepilogo dei dati del'allievo.
+-Il responsabile registra l'allievo all'attività interessata ed il sistema conferma la registrazione.
+
+UC5(visualizzazione dati):
+Attore primario: Responsabile(del centro o dell'azienda).
+-Un responsabile apre il sistema.
+-il responsabile seleziona la visualizzazione dei dati.
+-Se il responsabile è associato ad un centro il sistema mostra i dati del centro interessato
+altrimenti, se è un responsabile dell'azienda, il sistema mostra i dati relativi a tutti i centri.
+-Il responsabile naviga tra date, attività e allievi, del centro se è responsabile di centro, o anche
+tra centri se è responsabile di azienda.
+----------------------------------------------
+
+

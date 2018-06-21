@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link href="./assets/css/main.css" rel="stylesheet" />
+<title>Elenco Centri</title>
+</head>
+<body>
+	<header id="header">
+		<a class="logo" href="index.html">Acme Training Center</a>
+		<nav>
+			<a th:href="@{/home}">HOME</a>
+		</nav>
+	</header>
+	<header class="special">
+		<h1>ELENCO CENTRI</h1>
+		<th:block th:each="centro : ${centri}">
+			<li><a th:href="@{'/centro' + '/' + ${centro.id}}"><strong
+					th:text="${centro.nome}"></strong></a></li>
+		</th:block>
+	</header>
+	<footer id="footer">
+		<div class="inner">
+			<div class="content">
+				<section>
+					<h3>INFO</h3>
+					<p>Questo sito è stato creato ai fini di un progetto del corso
+						di Sistemi Informativi su Web. Anno accademico 2017/2018.</p>
+				</section>
+				<section>
+					<h4>SOCIAL</h4>
+					<ul class="plain">
+						<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+						<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+						<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+						<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="copyright">©BonaiutiPannucciCopyright.</div>
+		</div>
+	</footer>
+</body>
+</html>
